@@ -1,0 +1,10 @@
+.signup {
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
+.user {
+  font-family: "Courier New", monospace;
+  text-align: center;
+  border-style: solid;
+  padding: 25px 50px 75px 100px;
+}
