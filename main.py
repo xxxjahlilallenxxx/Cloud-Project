@@ -1,15 +1,17 @@
+import pyrebase
 from flask import Flask, render_template
 
 firebaseConfig = {
-    apiKey: "AIzaSyBRqKEG14eU2yBO39S633fXJCa7BphB9zo",
-    authDomain: "swamii-260617.firebaseapp.com",
-    databaseURL: "https://swamii-260617.firebaseio.com",
-    projectId: "swamii-260617",
-    storageBucket: "swamii-260617.appspot.com",
-    messagingSenderId: "264652459566",
-    appId: "1:264652459566:web:3176279c6aa01377d8d9bf",
-    measurementId: "G-NQCSM517KM"
-  };
+    "apiKey": "AIzaSyBRqKEG14eU2yBO39S633fXJCa7BphB9zo",
+    "authDomain": "swamii-20617.firebaseapp.com",
+    "databaseURL": "https://swamii-260617.firebaseio.com",
+    "projectId": "swamii-260617",
+    "storageBucket": "swamii-260617.appspot.com",
+    "messagingSenderId": "264652459566",
+    "appId": "1:264652459566:web:3176279c6aa01377d8d9bf",
+    "measurementId": "G-NQCSM517KM"
+  }
+firebase = pyrebase.initialize_app(firebaseConfig)
 app = Flask(__name__)
 
 
