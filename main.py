@@ -1,5 +1,13 @@
 import pyrebase
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 from flask import Flask, render_template
+
+cred = credentials.ApplicationDefault()
+firebase_admin.initialize_app(cred, {
+    'projectId':swamii-260905,
+})
 
 firebaseConfig = {
     "apiKey": "AIzaSyBRqKEG14eU2yBO39S633fXJCa7BphB9zo",
