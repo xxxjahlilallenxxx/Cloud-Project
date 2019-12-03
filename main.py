@@ -15,10 +15,23 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 app = Flask(__name__)
 
 
-@app.route('/')
-def signup():
+@app.route('/', methods=['GET','POST'])
+def signIn():
+    error = None
+    unsuccessful = 'Please check your credentials'
 
-    return render_template('signup.html')
+    if request.method == 'POST':
+        email = request.form["username"]
+        password = request.form["password"]
+
+        try:
+            auth.sign_in_with_email_and_password(email, password)
+            return render_template()
+        except:
+            return render_template('signIn.html', us=unsuccessful)
+    return render_template('signIn.html', error=error)
+
+@app.route('/')
 
 
 if __name__ == '__main__':
