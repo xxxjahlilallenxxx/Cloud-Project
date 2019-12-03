@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET','POST'])
-def signup():
+def signIn():
     error = None
     unsuccessful = 'Please check your credentials'
 
@@ -28,8 +28,10 @@ def signup():
             auth.sign_in_with_email_and_password(email, password)
             return render_template()
         except:
-            return render_template('signup.html', us=unsuccessful)
-    return render_template('signup.html', error=error)
+            return render_template('signIn.html', us=unsuccessful)
+    return render_template('signIn.html', error=error)
+
+@app.route('/')
 
 
 if __name__ == '__main__':
