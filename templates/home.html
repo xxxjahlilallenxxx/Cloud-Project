@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><i><b>Swamii</b></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ./nav -->
+
+    <!-- main -->
+    <main class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- profile brief -->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>BradonT</h4>
+                            <p>Cloud Computing Tutoring | $15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./friend requests -->
+        </div>
+        <div class="col-md-6">
+            <!-- post form -->
+            <form method="post" action="">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="content" placeholder="Add a service...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit" name="post">Submit</button>
+                    </span>
+                </div>
+            </form>
+            <hr>
+
+            <!-- ./feed -->
+        </div>
+
+        <footer class="container text-center">
+            <ul class="nav nav-pills pull-right">
+                <li>Swamii - Made by Bradon, Jahlil, and Ternia</li>
+            </ul>
+        </footer>
+        <!-- ./footer -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
