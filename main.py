@@ -39,7 +39,9 @@ def signIn():
             return render_template('signIn.html', us=unsuccessful)
     return render_template('signIn.html', error=error)
 
-@app.route('/')
+@app.route('/signup', methods=['GET','POST'])
+def signUp():
+    return('signUp.html')
 
 
 if __name__ == '__main__':
